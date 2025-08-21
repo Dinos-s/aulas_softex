@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Site da aula 4</title>
+</head>
+<body>
+    <h1>Bem vindo ao site da aula 4</h1>
+    <h2>Brincando com JS pt2</h2>
+
+    <div class="caixa">
+        <h1>Operações Matemáticas</h1>
+        <div>
+            <label>Digite um número:</label>
+            <input type="number" id="num1">
+        </div>
+        
+        <div>
+            <label>Digite outro número:</label>
+            <input type="number" id="num2">
+        </div>
+
+        <button id="math">Mostrar operações</button>
+
+        <div class="result"></div>
+    </div>
+
+    <div class="caixa">
+        <h1>Carteira de CNH</h1>
+        <div>
+            <label>Digite sua idade:</label>
+            <input type="number" id="age">
+        </div>
+
+        <input type="radio" name="cnh" value="sim">
+        <label>Sim</label>
+
+        <input type="radio" name="cnh" value="nao">
+        <label>Não</label>
+        <br>
+        <button onclick="check()">verificar</button>
+
+        <div class="res"></div>
+    </div>
+
+    <div class="caixa">
+        <h1>Quem é maior e menor</h1>
+        <div>
+            <label>Digite um número:</label>
+            <input type="number" id="num1">
+        </div>
+        
+        <div>
+            <label>Digite outro número:</label>
+            <input type="number" id="num2">
+        </div>
+        <br>
+        <button onclick="show()">maior ou menor</button>
+
+        <div class="rest"></div>
+    </div>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>

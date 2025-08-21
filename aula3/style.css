@@ -1,0 +1,55 @@
+body{
+    background-color: rgb(4, 5, 65);
+    color: white;
+    text-align: center;
+}
+
+.caixa {
+    background-color: #ffffffa8;
+    margin: 15px;
+    padding: 10px;
+    height: 15rem;
+    border-radius: 15px;
+}
+
+.atv4 {
+    height: 5rem;
+    padding: 5px;
+}
+
+input {
+    background: transparent;
+    border: 2px solid rgb(30, 83, 182);
+    border-radius: 2px;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.caixa>h1 {
+    text-decoration: underline wavy rgb(17, 0, 255);
+}
+
+#res {
+    color: rgb(221, 44, 44);
+}
+
+button {
+    background: none;
+    color: #fff;
+    border: 2px solid  red;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+button:hover { 
+    border: 2px solid rgb(226, 223, 16);
+    background: rgb(218, 115, 20);
+    color: #000;
+    font-size: 12pt;
+    font-weight: 600;
+}
