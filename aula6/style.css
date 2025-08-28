@@ -1,0 +1,50 @@
+body{
+    background-color: rgb(4, 5, 65);
+    color: white;
+}
+
+body>h1, h2 {
+    text-align: center;
+}
+
+.caixa {
+    background-color: #ffffffa8;
+    margin: 15px;
+    padding: 10px;
+    height: auto;
+    border-radius: 15px;
+}
+
+input {
+    background: local;
+    border: 2px solid rgb(30, 83, 182);
+    border-radius: 2px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.caixa>h1 {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {background-color: #414141;}
+
+tr:nth-child(even) {
+    background-color: #424040;
+}
