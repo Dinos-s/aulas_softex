@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Site da aula 7</title>
+</head>
+<body>
+    <h1>Bem vindo ao site da aula 7</h1>
+    <h2>Brincando com JS pt5</h2>
+
+    <div class="caixa">
+       <h1>Funções</h1>
+
+       <label>Informe seu nome:</label>
+       <input type="text" id="nomeInput">
+       <button onclick="saudacao(nomeInput.value)">Saudar</button>
+
+       <div class="box">
+        <section id="saudacao" class="hidden"></section>
+       </div>
+    </div>
+    
+    <div class="caixa">
+        <h1>Função em dobro</h1>
+        <div class="echo">
+            <label>Digite um número:</label>
+            <input type="number" id="num1">
+        </div>
+
+        <button id="math" onclick="dobro(num1)">Mostrar o dobro</button>
+
+        <div class="box">
+            <section class="result hidden"></section>
+        </div>
+    </div>
+
+    <div class="caixa">
+        <h1>Funções Operações Matemáticas</h1>
+        <div class="echo">
+            <label>Digite o primeiro número:</label>
+            <input type="number" id="nu1">
+        </div>
+        <div class="echo">
+            <label>Digite o segundo número:</label>
+            <input type="number" id="nu2">
+        </div>
+
+        <button id="math" onclick="operacoes(numero1.value, numero2.value)">Calcular</button>
+
+        <div class="box">
+            <section class="result2 hidden"></section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
