@@ -48,3 +48,13 @@ th {background-color: #414141;}
 tr:nth-child(even) {
     background-color: #424040;
 }
+
+.aprovado{
+    color: black;
+    background-color: rgb(150, 238, 18);
+}
+
+.reprovado{
+    color: black;
+    background-color: rgb(218, 11, 11);
+}

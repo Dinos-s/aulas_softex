@@ -17,7 +17,7 @@ for (let h = 0; h < notaAluno.length; h++) {
     linha.appendChild(celAluno)
 
     soma = 0
-    for (let i = 0; i < notaAluno.length; i++) {
+    for (let i = 0; i < notaAluno[h].length; i++) {
         let celNota = document.createElement("td")
         celNota.textContent = notaAluno[h][i]  
         linha.appendChild(celNota)
@@ -61,7 +61,7 @@ for (let r = 0; r < notaAlunos.length; r++) {
     line.appendChild(celAlu)
 
     som = 0
-    for (let s = 0; s < notaAlunos.length; s++) {
+    for (let s = 0; s < notaAlunos[r].length; s++) {
         let celNot = document.createElement("td")
         celNot.textContent = notaAlunos[r][s]  
         line.appendChild(celNot)
@@ -74,10 +74,11 @@ for (let r = 0; r < notaAlunos.length; r++) {
 
     let celSitua = document.createElement("td")
     if (medi >= 7) {        
-        
-        celSitua.textContent = "OK"
+        celSitua.classList.add("aprovado")
+        celSitua.textContent = "Aprovado"
     } else {
-        celSitua.textContent = "Falha"
+        celSitua.classList.add("reprovado")
+        celSitua.textContent = "Reprovou"
         
     }
     line.appendChild(celSitua)
