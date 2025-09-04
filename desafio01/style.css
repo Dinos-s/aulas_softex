@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    background-color: rgba(243, 245, 240, 0.685);
+}
+
+h1 {
+    color: cadetblue;
+}
+
+button {
+    background-color: rgba(92, 82, 153, 0.829);
+    color: white;
+    border: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: slateblue;
+    cursor: pointer;
+}
+th {
+    background-color: rgb(240, 201, 178);
+
+}
+input {
+    width: 50px;
+    border: 2px solid black;
+}
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+.tabela {
+    margin-top: 10px;
+    border: 2px solid black;
+    border-radius: 4px;
+
+}
