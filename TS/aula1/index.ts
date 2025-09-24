@@ -6,8 +6,13 @@ class bicicleta {
 
 
     // metodos
-    trocarMarcha()
-    freiar()
+    trocarMarcha(): void {
+        console.log("Marcha trocada.");
+    }
+
+    freiar(): void {
+        console.log("Bicicleta freiada.");
+    }
 }
 
 // atividade 2
@@ -21,6 +26,8 @@ class Livro {
     genero:string = ""
     preco:number = 0.00
     status:boolean = true     
+
+    emprestado?:Pessoa
 
     // metodo
     mudarStatus(): void {
@@ -101,14 +108,26 @@ class Biblioteca {
     allUsers(): void {
         console.log("--- Users cadastrados ---");
         this.users.forEach(user=> {
+            let Tipo: string;
+            
+            if (user instanceof Aluno) {
+                Tipo = "Aluno"
+            } else if (user instanceof Bibliotecario) {
+                Tipo = "Bibliotecário"
+            } else if (user instanceof Professor) {
+                Tipo = "Professor"
+            } else {
+                Tipo = "Usuário generico"
+            }
+
             console.log(`
                 Nome: ${user.nome},
                 Idade: ${user.idade},
-                E-mail: ${user.email}
+                E-mail: ${user.email},
+                Tipo de usuario: ${Tipo}
             `);
         })
     }
-
 
     allLivros(): void {
         console.log("--- Acervo da Biblioteca ---");
@@ -118,13 +137,50 @@ class Biblioteca {
                 Título: ${livro.titulo},
                 Autor: ${livro.autor},
                 Genero: ${livro.genero},
-                Preco: R$ ${livro.preco.toFixed(2)}    
+                Preco: R$ ${livro.preco.toFixed(2)},
+                Status: ${livro.status ? "Disponível" : "Emprestado"}
             `);
         })
     }
 
     livroPorTitulo(titulo: string): Livro | undefined {
         return this.acervo.find(livro => livro.titulo === titulo)
+    }
+
+    emprestarLivro(titulo: string, user: Pessoa): void {
+        const livro = this.livroPorTitulo(titulo);
+        if(livro && livro.status) {
+            livro.mudarStatus()
+            livro.emprestado = user
+            console.log(`O livro: ${livro.titulo}, foi emprestado para o usuário: ${user.nome}`);
+        } else if (livro) {
+            console.log(`O livro: ${livro.titulo}, não está disponível no momento`);
+        } else {
+            console.log(`O livro com o título "${titulo}" não foi encontrado no acervo`);
+        }
+    }
+
+    devolverLivro(titulo: string, user: Pessoa): void {
+        const livro = this.livroPorTitulo(titulo);
+        if(livro && !livro.status) {
+            livro.mudarStatus()
+            console.log(`O usuário: ${user.nome}, devolveu o livro: ${livro.titulo}`);
+        } else if (livro) {
+            console.log(`O livro: ${livro.titulo}, não está emprestado`);
+        } else {
+            console.log(`O livro com o título "${titulo}" não foi encontrado no acervo`);
+        }
+    }
+
+    checkEmprestimo(titulo: string): void {
+        const livro = this.livroPorTitulo(titulo);
+        if(livro && !livro.status && livro.emprestado) {
+            console.log(`O livro: ${livro.titulo}, está emprestado para o usuário: ${livro.emprestado.nome}`);
+        } else if (livro) {
+            console.log(`O livro: ${livro.titulo}, está disponível no acervo`);
+        } else {
+            console.log(`O livro com o título "${titulo}" não foi encontrado no acervo`);
+        }
     }
 }
 
@@ -171,3 +227,9 @@ console.log("------------");
 
 miniBiblioteca.allLivros()
 miniBiblioteca.allUsers()
+miniBiblioteca.emprestarLivro("O Senhor dos Anéis", aluno)
+console.log(`O livro "${livro1.titulo}" está ${livro1.status ? "Disponível" : "Emprestado"}`);
+miniBiblioteca.devolverLivro("O Senhor dos Anéis", aluno)
+console.log(`O livro "${livro1.titulo}" está ${livro1.status ? "Disponível" : "Emprestado"}`);
+
+miniBiblioteca.checkEmprestimo("O Senhor dos Anéis")
