@@ -1,0 +1,138 @@
+/* Reset básico para garantir consistência */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos do corpo (body) para centralizar a calculadora */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f7f6;
+    /* Fundo suave */
+}
+
+/* Container principal da calculadora */
+.calculator-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Espaçamento entre os elementos */
+}
+
+/* Estilos para os pares de label/input */
+label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+    /* Garante que a label ocupe sua própria linha */
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #007bff;
+    /* Cor ao focar */
+    outline: none;
+}
+
+/* Container para os botões */
+.button-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 colunas iguais */
+    gap: 10px;
+    /* Espaço entre os botões */
+    margin-top: 10px;
+}
+
+/* Estilos dos botões */
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.1s ease;
+    color: #fff;
+    /* Texto branco */
+}
+
+/* Cores específicas para os botões */
+#sum {
+    background-color: #28a745;
+}
+
+/* Verde */
+#sub {
+    background-color: #dc3545;
+}
+
+/* Vermelho */
+#mul {
+    background-color: #ffc107;
+    color: #333;
+}
+
+/* Amarelo (com texto escuro) */
+#div {
+    background-color: #17a2b8;
+}
+
+/* Azul-ciano */
+
+/* Efeito de hover (mouse sobre) */
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    /* Leve subida */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito de clique (ativo) */
+button:active {
+    transform: translateY(0);
+}
+
+/* Estilos para a área de resultado */
+.result-display {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9ecef; /* Fundo suave para o resultado */
+    border-radius: 8px;
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    border-left: 5px solid #007bff; /* Detalhe lateral */
+}
+
+/* Estilo para o valor do resultado */
+#resultado {
+    font-size: 24px;
+    font-weight: 900; /* Será alterado pelo TS */
+    color: #007bff;
+    transition: color 0.3s;
+    display: block; /* Para ocupar a linha toda */
+    margin-top: 5px;
+}

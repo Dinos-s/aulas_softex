@@ -1,0 +1,167 @@
+/* Variáveis para fácil personalização */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #f44336;
+    --background-color: #f0f2f5;
+    --card-background: #ffffff;
+    --text-color: #333;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinhado ao topo para melhor visualização em telas maiores */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background: var(--card-background);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+/* Esconde elementos para leitores de tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Seção de Input */
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#taskInput:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Estilo Básico para Botões */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+/* Botão Adicionar */
+.add-btn {
+    background-color: var(--primary-color);
+}
+
+.add-btn:hover:not(:disabled) {
+    background-color: #43A047;
+}
+
+/* Lista de Tarefas */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-checkbox {
+    margin-right: 15px;
+    /* Estilização básica de checkbox - pode ser melhorada com customização */
+    width: 18px;
+    height: 18px;
+}
+
+.task-text {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+/* Botão de Remover */
+.remove-btn {
+    background-color: var(--secondary-color);
+    padding: 6px 10px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.remove-btn:hover:not(:disabled) {
+    background-color: #d32f2f;
+}
+
+/* Ações em Massa */
+.actions-section {
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* Botão Limpar Concluídas */
+.clear-btn {
+    background-color: #007bff;
+}
+
+.clear-btn:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+/* Estilo para botões desabilitados */
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Calculadora com TS</title>
+    </head>
+    <body>
+        <div class="calculator-container">
+            <label for="num1">Digite o primeiro Número</label>
+            <input type="number" id="num1" placeholder="Ex: 10">
+
+            <label for="num2">Digite o segundo Número</label>
+            <input type="number" id="num2" placeholder="Ex: 5">
+
+            <div class="button-group">
+                <button id="sum">Somar</button>
+                <button id="sub">Subtrair</button>
+                <button id="mul">Multiplicar</button>
+                <button id="div">Dividir</button>
+            </div>
+
+            <div class="result-display">
+                Resultado: <span id="resultado">0</span>
+            </div>
+        </div>
+
+        <script src="./script.ts"></script>
+    </body>
+</html>
