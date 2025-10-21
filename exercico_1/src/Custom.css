@@ -1,0 +1,97 @@
+/* Estilos para o elemento principal (main) */
+.mainContainer {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  font-family: system-ui;
+  background-color: #f5f5f5;
+}
+
+/* Estilos para o card do contador */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.card h1{
+    color: #333;
+}
+
+/* Estilo para o valor do contador */
+.countText {
+  font-size: 2.5em;
+  font-weight: bolder;
+  margin: 15px 0;
+  color: #333;
+}
+
+/* Estilos para o grupo de input (rótulo + campo) */
+.inputGroup {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos para o campo de input */
+.input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 80px;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+/* Estilos para o grupo de botões */
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+/* Estilo base para todos os botões */
+.button {
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+/* Estilos específicos para os botões */
+.somarButton {
+  background-color: #4caf50; /* Verde */
+  color: white;
+}
+
+.somarButton:hover {
+  background-color: #43a047;
+}
+
+.subtrairButton {
+  background-color: #ff9800; /* Laranja */
+  color: white;
+}
+
+.subtrairButton:hover {
+  background-color: #fb8c00;
+}
+
+.zerarButton {
+  background-color: #f44336; /* Vermelho */
+  color: white;
+}
+
+.zerarButton:hover {
+  background-color: #e53935;
+}
