@@ -1,0 +1,90 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  /* Layout: Center everything horizontally and stack vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px; /* Constrain width for better readability */
+  margin: 50px auto; /* Center block horizontally with top/bottom margin */
+  padding: 30px 40px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for the label */
+label {
+  align-self: center; /* Align label to the start (left) */
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+/* Style for the input field */
+.form-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box; /* Include padding in element's total width/height */
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  border-color: #007bff; /* Highlight on focus */
+  outline: none;
+}
+
+/* Button Group Styling */
+.btn {
+  width: 100%; /* Make buttons full width */
+  padding: 12px;
+  margin-top: 10px; /* Space between buttons */
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+/* Primary Button (Entrar) */
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.prima {
+  background-color: #007bff;
+  color: white;
+}
+
+.seco {
+  background-color: #d61010;
+  color: white;
+}
+
+.msg {
+  margin-top: 25px;
+  color: #28a745; /* Cor de sucesso (verde) */
+  font-size: 24px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out; /* Adiciona uma pequena animação */
+}
+
+/* Animação simples */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
